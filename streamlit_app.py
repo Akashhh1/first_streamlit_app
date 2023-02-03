@@ -41,7 +41,8 @@ try:
 
 except URLError as e:
   streamlit.error()
-    
+  
+my_cur = my_cnx.cursor()    
 my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
